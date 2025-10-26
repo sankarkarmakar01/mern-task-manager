@@ -1,21 +1,3 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// const TaskCard = ({title,description,id}) => {
-//   return (
-//     <div className='w-72 h-auto p-5 border-2 rounded-[14px]'>
-//         <h2 className='text-lg font-bold'>{title}</h2>
-//         <p className='text-sm'>{description}</p>
-//         <div className='w-full flex items-center justify-between'>
-//            <Link to={`/updateTask/${id}`} className="cursor-pointer text-blue-600">Edit</Link>
-//             <button className='cursor-pointer'>Delete</button>
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default TaskCard
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -59,7 +41,7 @@ const TaskCard = ({ title, description, taskStatus, id, onDelete }) => {
 
         <button
           onClick={() => onDelete(id)}
-          className="px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded-lg text-sm transition-all duration-200"
+          className="px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white rounded-lg text-sm transition-all duration-200 cursor-pointer"
         >
           Delete
         </button>

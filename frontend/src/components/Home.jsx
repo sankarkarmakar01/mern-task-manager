@@ -1,47 +1,3 @@
-// import React, { useEffect, useState } from "react";
-// import TaskCard from "./TaskCard";
-
-// const Home = () => {
-//   const [taskData, setTaskData] = useState([]);
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       const response = await fetch(`http://localhost:8000/api/task/all-tasks`, {
-//         method: "get",
-//       });
-//       const data = await response.json();
-//       setTaskData(data.tasks);
-//     };
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="w-full pt-5 px-10 grid grid-cols-4 place-items-center gap-5">
-//         {taskData ? (
-//           taskData.map((data, idx) => {
-//             return (
-//               <TaskCard
-//                 key={idx}
-//                 title={data.title}
-//                 description={data.description}
-//                 id={data._id}
-//               />
-//             );
-//           })
-//         ) : (
-//           <>
-//             <p>Data Not Found...</p>
-//           </>
-//         )}
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Home;
-
-
 import React, { useEffect, useState } from "react";
 import TaskCard from "./TaskCard";
 import { toast } from "react-toastify";
@@ -66,13 +22,18 @@ const Home = () => {
 
   // 🗑️ Delete Task
   const handleDelete = async (id) => {
-    const confirmDelete = window.confirm("Are you sure you want to delete this task?");
-    if (!confirmDelete) return;
+    // const confirmDelete = window.confirm(
+    //   "Are you sure you want to delete this task?"
+    // );
+    // if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:8000/api/task/delete-task/${id}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `http://localhost:8000/api/task/delete-task/${id}`,
+        {
+          method: "DELETE",
+        }
+      );
 
       const data = await response.json();
 

@@ -1,23 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-
-// const Navbar = () => {
-//   return (
-//     <>
-//       <nav className="w-full h-auto py-4 px-10 flex items-center justify-between bg-sky-400 text-white">
-//         <div className="text-2xl font-semibold">Task Manager</div>
-//         <div className="flex justify-center items-center gap-10 font-semibold text-lg">
-//           <Link to="/">All Tasks</Link>
-//           <Link to="/addTask">Add Task</Link>
-//         </div>
-//       </nav>
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 
